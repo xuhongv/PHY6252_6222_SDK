@@ -1,0 +1,149 @@
+---
+efuse_lib: 
+- 'lib\generate_efuse_lib\lib_efuse3.uvprojx'
+- [Objects\lib_efuse3.lib, ..\lib_efuse3.lib]
+
+sec_boot: 
+- 'lib\generate_sec_lib\sec_boot.uvprojx'
+- [Objects\sec_boot.lib, ..\sec_boot.lib]
+
+rf: 
+- 'lib\generate_lib\rf.uvprojx'
+- [Objects\rf.lib, ..\rf.lib]
+
+ble_host:
+- lib\generate_ble_host_lib\ble_host.uvprojx
+- [Objects\ble_host.lib, ..\ble_host.lib]
+
+smart_rf:
+- example\PhyPlusPhy\smart_rf\smart_rf.uvprojx
+
+snrf:
+- example\PhyPlusPhy\smart_nrf\smart_nrf.uvprojx
+
+dtm:
+- example\ble_peripheral\simpleBlePeripheral\simpleBlePeripheral.uvprojx
+- {'_BUILD_FOR_DTM_':'1'}
+- [Objects\simpleBlePeripheral.hex, bin\dtm_sbp.hex, dtm.asm]
+
+sbp:
+- example\ble_peripheral\simpleBlePeripheral\simpleBlePeripheral.uvprojx
+- {'_BUILD_FOR_DTM_':'0'}
+- [Objects\simpleBlePeripheral.hex, bin\sbp.hex,sbp.asm]
+
+sbpmc:
+- example\ble_peripheral\sbpMultiConn\sbpMultiConn.uvprojx
+- {'_BUILD_FOR_DTM_':'0'}
+- [Objects\sbpMultiConn.hex, bin\sbpMC.hex,sbpMC.asm]
+
+sbc:
+- example\ble_central\simpleBleCentral\simpleBleCentral.uvprojx
+- [Objects\simpleBleCentral.hex, bin\simpleBleCentral.hex,sbc.asm]
+
+sbcmc:
+- example\ble_central\sbcMultiConn\sbcMultiConn.uvprojx
+
+sbm:
+- example\ble_multi\simpleBleMultiConnection\simpleBleMulti.uvprojx
+
+ext_sbp:
+- example\ble_peripheral\extBlePeripheral\extBlePeripheral.uvprojx
+
+ext_sbc:
+- example\ble_central\extBleCentral\extBleCentral.uvprojx
+
+sbpSmart:
+- example\ble_peripheral\sbpSmartRF\sbpSmartRF.uvprojx
+- {'_BUILD_FOR_DTM_':'0'}
+- [Objects\sbpSmartRF.hex, bin\sbpSmartRF.hex,sbpSmartRF.asm]
+
+sbpsnrf:
+- example\ble_peripheral\sbpSmart_nRF\sbpSmart_nRF.uvprojx
+- {'_BUILD_FOR_DTM_':'0'}
+- [Objects\sbpSmart_nRF.hex, bin\sbpSmart_nRF.hex,sbpSmart_nRF.asm]
+
+pwmLight:
+- example\ble_peripheral\pwmLight\pwmLight.uvprojx
+
+hidkb:
+- example\ble_peripheral\HIDKeyboard\HIDKeyBoard.uvprojx
+
+bleUart_AT:
+- example\ble_peripheral\bleUart_AT\bleUart_AT.uvprojx
+
+spiflash:
+- example\peripheral\spiflash\spiflash.uvprojx
+
+adc:
+- example\peripheral\adc\adc.uvprojx
+
+dmac:
+- example\peripheral\dmac\dmac.uvprojx
+
+fs:
+- example\peripheral\fs\fs.uvprojx
+
+gpio:
+- example\peripheral\gpio\gpio.uvprojx
+
+i2c:
+- example\peripheral\i2c\i2c.uvprojx
+
+timer:
+- example\peripheral\timer\timer.uvprojx
+
+watchdog:
+- example\peripheral\watchdog\watchdog.uvprojx
+
+bsp_btn:
+- example\peripheral\bsp_btn\bsp_btn.uvprojx
+
+ota_sbk:
+- example\OTA\OTA_internal_flash\ota_if.uvprojx
+- {'CFG_OTA_BANK_MODE':'OTA_SINGLE_BANK','USE_FCT':'0'}
+- ['bin\ota.hex','bin\ota_single_bank.hex',ota_sbk.asm,'Objects\ota.axf']
+
+slb:
+- example\OTA\slboot\slboot.uvprojx
+
+mesh_switch:
+- example\ble_mesh\mesh_switch\mesh_switch.uvprojx
+
+mesh_light:
+- example\ble_mesh\mesh_light\mesh_light.uvprojx
+
+mesh_gateway:
+- example\ble_mesh\mesh_gateway\mesh_gateway.uvprojx
+
+mesh_ali_curtain:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_curtain\aliGenie_mesh_curtain.uvprojx
+
+mesh_ali_3key:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_3KeySwitch\aliGenie_mesh_3Keyswitch.uvprojx
+
+mesh_ali_fan:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_fan\aliGenie_mesh_fan.uvprojx
+
+mesh_ali_fanlight:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_fanlight\aliGenie_mesh_fanlight.uvprojx
+
+mesh_ali_fogger:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_fogger\aliGenie_mesh_fogger.uvprojx
+
+mesh_ali_heater:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_heater\aliGenie_mesh_heater.uvprojx
+
+mesh_ali_light:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_light\aliGenie_mesh_light.uvprojx
+
+mesh_ali_socket:
+- example\ble_mesh\aliGenie_bleMesh\aliGenie_bleMesh_socket\aliGenie_mesh_socket.uvprojx
+
+mesh_friend:
+- example\ble_mesh\mesh_friend\mesh_friend.uvprojx
+
+mesh_lpn:
+- example\ble_mesh\mesh_lpn\mesh_lpn.uvprojx
+
+mesh_multiconn:
+- example\ble_mesh\mesh_multiconn\mesh_multiconn.uvprojx

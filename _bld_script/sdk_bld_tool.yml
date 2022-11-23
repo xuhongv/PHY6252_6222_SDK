@@ -1,0 +1,16 @@
+---
+# add bld tool path 
+tPath0:
+- C:\Keil_v5\UV4\UV4.exe
+
+tPath1:
+- C:\UV4\UV4.exe
+
+tPath2: 
+- D:\Keil_v5\UV4\UV4.exe
+
+tPath3:
+- D:\UV4\UV4.exe
+
+tPath4:
+- D:\\Software\\Keil\\Install\\UV4\\UV4.exe

@@ -1,0 +1,1 @@
+压缩包包含Jlink待替换文件、PACK安装包及Jlink调试使用手册等，解压后可以按照Jlink调试使用手册熟悉PHY6222的keil和Jlink环境配置。

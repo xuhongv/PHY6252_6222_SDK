@@ -1,0 +1,111 @@
+
+DEF += -DCFG_CP
+DEF += -DOSAL_CBTIMER_NUM_TASKS=1
+DEF += -DMTU_SIZE=247
+DEF += -DHOST_CONFIG=4
+DEF += -DHCI_TL_NONE=1
+DEF += -DENABLE_LOG_ROM_=0
+DEF += -D_BUILD_FOR_DTM_=0
+DEF += -DDEBUG_INFO=1
+DEF += -DDBG_ROM_MAIN=0
+DEF += -DAPP_CFG=0
+DEF += -DOSALMEM_METRICS=0
+DEF += -DPHY_MCU_TYPE=MCU_BUMBEE_M0
+DEF += -DCFG_SLEEP_MODE=PWR_MODE_NO_SLEEP
+DEF += -DDEF_GAPBOND_MGR_ENABLE=0
+DEF += -DUSE_FS=0
+DEF += -DMAX_NUM_LL_CONN=1
+DEF += -DUSE_ROMSYM_ALIAS
+DEF += -DADV_NCONN_CFG=0x01
+DEF += -DADV_CONN_CFG=0x02
+DEF += -DSCAN_CFG=0x04
+DEF += -DINIT_CFG=0x08
+DEF += -DBROADCASTER_CFG=0x01
+DEF += -DOBSERVER_CFG=0x02
+DEF += -DPERIPHERAL_CFG=0x04
+
+INC += -I$(ROOT)/components/gcc/CMSIS/include
+INC += -I$(ROOT)/components/driver/led_light
+INC += -I$(ROOT)/components/profiles/ota_app
+INC += -I$(ROOT)/components/profiles/DevInfo
+INC += -I$(ROOT)/components/profiles/SimpleProfile
+INC += -I$(ROOT)/components/profiles/Roles
+INC += -I$(ROOT)/misc
+INC += -I$(ROOT)/components/inc
+INC += -I$(ROOT)/components/driver/clock
+INC += -I$(ROOT)/components/driver/gpio
+INC += -I$(ROOT)/components/arch/cm0
+INC += -I$(ROOT)/components/ble/include
+INC += -I$(ROOT)/components/ble/controller
+INC += -I$(ROOT)/components/ble/hci
+INC += -I$(ROOT)/components/ble/host
+INC += -I$(ROOT)/components/libraries/secure
+INC += -I$(ROOT)/components/osal/include
+INC += -I$(ROOT)/components/driver/key
+INC += -I$(ROOT)/components/driver/uart
+INC += -I$(ROOT)/components/driver/log
+INC += -I$(ROOT)/components/driver/adc
+INC += -I$(ROOT)/components/driver/pwrmgr
+INC += -I$(ROOT)/components/driver/timer
+INC += -I$(ROOT)/components/driver/spi
+INC += -I$(ROOT)/components/libraries/fs
+INC += -I$(ROOT)/components/libraries/cliface
+INC += -I$(ROOT)/components/driver/pwm
+INC += -I$(ROOT)/components/driver/kscan
+INC += -I$(ROOT)/components/driver/dma
+INC += -I$(ROOT)/components/driver/flash
+INC += -I$(ROOT)/components/driver/spiflash
+INC += -I$(ROOT)/components/driver/watchdog
+INC += -I$(ROOT)/components/driver/adc
+INC += -I$(ROOT)/components/driver/i2c
+
+ifdef CONFIG_PHY6222_PHY_MESH
+INC += -I$(ROOT)/components/ethermind/platforms/interfaces/crypto
+INC += -I$(ROOT)/components/ethermind/external/crypto
+INC += -I$(ROOT)/components/ethermind/external/crypto/asm_ecdh_p256
+INC += -I$(ROOT)/components/ethermind/external/crypto/aes
+INC += -I$(ROOT)/components/ethermind/external/crypto/sha256
+INC += -I$(ROOT)/components/ethermind/osal/src/phyos
+INC += -I$(ROOT)/components/ethermind/platforms
+INC += -I$(ROOT)/components/ethermind/mesh/export/include
+INC += -I$(ROOT)/components/ethermind/platforms/mesh
+INC += -I$(ROOT)/components/ethermind/mesh/export/platforms/ext
+INC += -I$(ROOT)/components/ethermind/utils/include
+INC += -I$(ROOT)/components/ethermind/mesh/export/bearer
+INC += -I$(ROOT)/components/ethermind/mesh/export/climodel
+INC += -I$(ROOT)/components/ethermind/mesh/export/vendormodel
+INC += -I$(ROOT)/components/ethermind/mesh/export/vendormodel/server
+INC += -I$(ROOT)/components/ethermind/mesh/export/cbtimer
+INC += -I$(ROOT)/components/ethermind/mesh/export/appl
+
+
+
+ifdef CONFIG_PHYAPP_MSH_LIGHT
+INC += -I$(ROOT)/example/ble_mesh/mesh_light/source/bleMesh
+endif
+endif
+
+ifdef CONFIG_MIJIA_APIS
+INC += -I$(ROOT)/components/xiaomi
+INC += -I$(ROOT)/components/xiaomi/api
+INC += -I$(ROOT)/components/xiaomi/platform
+INC += -I$(ROOT)/components/xiaomi/libs
+INC += -I$(ROOT)/components/xiaomi/libs/ble_spec
+INC += -I$(ROOT)/components/xiaomi/libs/common
+INC += -I$(ROOT)/components/xiaomi/libs/mesh_auth
+INC += -I$(ROOT)/components/xiaomi/libs/third_party
+INC += -I$(ROOT)/components/xiaomi/libs/utility
+INC += -I$(ROOT)/components/xiaomi/libs/cryptography
+
+ifdef CONFIG_PHYAPP_MIJIA_LIGHT
+INC += -I$(ROOT)/example/ble_mesh/mijia_mesh_light/source/miot_spec
+INC += -I$(ROOT)/example/ble_mesh/mijia_mesh_light/source/bleMesh
+INC += -I$(ROOT)/example/ble_mesh/mijia_mesh_light
+endif
+
+ifdef CONFIG_PHYAPP_MIJIA_ADVSCAN
+INC += -I$(ROOT)/example/ble_mesh/mijia_advscan/source/miot_spec
+INC += -I$(ROOT)/example/ble_mesh/mijia_advscan/source/bleMesh
+INC += -I$(ROOT)/example/ble_mesh/mijia_advscan
+endif
+endif
