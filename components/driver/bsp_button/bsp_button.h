@@ -3,12 +3,12 @@
 
 #include "types.h"
 
-//#define BSP_BTN_LONG_PRESS_ENABLE
+#define BSP_BTN_LONG_PRESS_ENABLE
 
 #define BTN_SYS_TICK                            10  //unit:ms
-#define BTN_FILTER_TICK_COUNT                   5   //(BTN_SYS_TICK*BTN_FILTER_TICK_COUNT)            ms
-#define BTN_LONG_PRESS_START_TICK_COUNT         10  //(BTN_SYS_TICK*BTN_LONG_PRESS_START_TICK_COUNT)  ms
-#define BTN_LONG_PRESS_KEEP_TICK_COUNT          100 //(BTN_SYS_TICK*BTN_LONG_PRESS_KEEP_TICK_COUNT)   ms
+#define BTN_FILTER_TICK_COUNT                   3   //(BTN_SYS_TICK*BTN_FILTER_TICK_COUNT)            ms
+#define BTN_LONG_PRESS_START_TICK_COUNT         1500  //(BTN_SYS_TICK*BTN_LONG_PRESS_START_TICK_COUNT)  ms
+#define BTN_LONG_PRESS_KEEP_TICK_COUNT          2500 //(BTN_SYS_TICK*BTN_LONG_PRESS_KEEP_TICK_COUNT)   ms
 
 #define BTN_NUMBER                              32  //valid:[0,0x2F].reserved[0x30,0x3F]
 #define BTN_NONE                                0xFF

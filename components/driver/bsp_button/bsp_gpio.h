@@ -50,8 +50,8 @@ extern "C" {
 #include "error.h"
 #include "gpio.h"
 
-#define GPIO_SINGLE_BTN_NUM           3
-#define GPIO_SINGLE_BTN_IDLE_LEVEL    1
+#define GPIO_SINGLE_BTN_NUM           1
+#define GPIO_SINGLE_BTN_IDLE_LEVEL    0
 
 typedef void (*gpio_btn_callback_t)(uint8_t evt);
 

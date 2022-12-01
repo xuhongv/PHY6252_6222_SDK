@@ -62,7 +62,7 @@ extern "C"
 #define BSP_BTN_JUST_GPIO                                   (0x01)
 #define BSP_BTN_JUST_KSCAN                                  (0x02)
 #define BSP_BTN_GPIO_AND_KSCAN                              (0x03)
-#define BSP_BTN_HARDWARE_CONFIG                             BSP_BTN_JUST_GPIO
+#define BSP_BTN_HARDWARE_CONFIG                             BSP_BTN_GPIO_AND_KSCAN
 
 #if (BSP_BTN_HARDWARE_CONFIG == BSP_BTN_JUST_GPIO)
 
